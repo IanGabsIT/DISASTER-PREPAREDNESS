@@ -1,0 +1,105 @@
+@import url("./disaster.css");
+
+/* Typhoon specific theme */
+body.disaster-typhoon {
+  --clr-bg: #0f0f0f;
+  --clr-bg-alt: #1a1a1a;
+  --clr-card: rgba(31, 31, 31, 0.85);
+  --clr-card-pop: rgba(45, 45, 45, 0.75);
+  --clr-accent: #9ca3af;
+  --clr-accent-2: #d1d5db;
+  --clr-accent-3: #6b7280;
+  --clr-accent-4: #4b5563;
+  --clr-text: #f9fafb;
+  --clr-muted: #e5e7eb;
+  --clr-bg-grad-1: rgba(156, 163, 175, 0.25);
+  --clr-bg-grad-2: rgba(107, 114, 128, 0.2);
+  --clr-bg-orb-1: rgba(156, 163, 175, 0.15);
+  --clr-bg-orb-2: rgba(107, 114, 128, 0.15);
+  --clr-header-bg-1: rgba(15, 15, 15, 0.95);
+  --clr-header-bg-2: rgba(26, 26, 26, 0.9);
+  --clr-header-grad-1: rgba(156, 163, 175, 0.3);
+  --clr-header-grad-2: rgba(107, 114, 128, 0.25);
+  --clr-nav-bg: rgba(15, 15, 15, 0.95);
+  --clr-nav-border: rgba(156, 163, 175, 0.3);
+  --clr-nav-shadow: rgba(156, 163, 175, 0.4);
+  --clr-nav-active-1: rgba(156, 163, 175, 0.25);
+  --clr-nav-active-2: rgba(107, 114, 128, 0.2);
+  --clr-section-border: rgba(156, 163, 175, 0.25);
+  --clr-section-shadow: rgba(15, 15, 15, 0.5);
+  --clr-section-hover-1: rgba(156, 163, 175, 0.08);
+  --clr-section-hover-2: rgba(107, 114, 128, 0.08);
+  --clr-card-hover: rgba(156, 163, 175, 0.2);
+  --clr-card-hover-border: rgba(156, 163, 175, 0.6);
+  --clr-card-shadow: rgba(15, 15, 15, 0.6);
+  --clr-badge-bg: rgba(156, 163, 175, 0.15);
+  --clr-badge-border: rgba(156, 163, 175, 0.4);
+  --clr-input-border: rgba(156, 163, 175, 0.4);
+  --clr-input-bg: rgba(31, 31, 31, 0.6);
+  --clr-result-bg: rgba(31, 31, 31, 0.8);
+  --clr-result-border: rgba(156, 163, 175, 0.4);
+  --clr-result-shadow: rgba(156, 163, 175, 0.25);
+  --clr-video-shadow: rgba(156, 163, 175, 0.3);
+  --clr-stat-border: rgba(156, 163, 175, 0.3);
+  --clr-spark-bg: rgba(156, 163, 175, 0.3);
+  --clr-table-border: rgba(156, 163, 175, 0.3);
+  --clr-table-header: rgba(156, 163, 175, 0.15);
+  --clr-orb: rgba(156, 163, 175, 0.4);
+  --clr-link-shadow: rgba(156, 163, 175, 0.4);
+  background: radial-gradient(circle at 20% 20%, var(--clr-bg-grad-1), transparent 45%),
+    radial-gradient(circle at 80% 0%, var(--clr-bg-grad-2), transparent 40%), var(--clr-bg);
+}
+
+body.disaster-typhoon::before {
+  background: radial-gradient(circle, var(--clr-bg-orb-1), transparent 65%);
+}
+
+body.disaster-typhoon::after {
+  background: radial-gradient(circle, var(--clr-bg-orb-2), transparent 65%);
+}
+
+body.disaster-typhoon header::before {
+  background: radial-gradient(circle at 30% 20%, var(--clr-header-grad-1), transparent 55%);
+}
+
+body.disaster-typhoon header::after {
+  background: radial-gradient(circle at 70% 40%, var(--clr-header-grad-2), transparent 55%);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 26, 10, 0.3);
+  z-index: 1;
+}
+
+body.disaster-landslide > *:not(.video-background) {
+  position: relative;
+  z-index: 1;
+}

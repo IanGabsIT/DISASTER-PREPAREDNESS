@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typhoon Disaster Preparedness</title>
+    <link rel="stylesheet" href="typhoon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-typhoon">
+
+    <!-- YouTube Video Background -->
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/XiWRUfz_zjw?autoplay=1&loop=1&playlist=XiWRUfz_zjw&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=XiWRUfz_zjw""
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-overlay"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <p class="badge">Typhoon Disaster Preparedness</p>
+            <h1>🌀 Typhoon Preparedness Guide</h1>
+            <p class="header-subtitle">Comprehensive guide for typhoon preparation, response, and recovery</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Typhoon Readiness Self-Assessment</h2>
+            <p>Evaluate your typhoon preparedness</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="typhoon-kit">1. Do you have a typhoon emergency kit?</label>
+                    <select id="typhoon-kit" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, complete 7-day supply kit ready</option>
+                        <option value="2">Partial kit with 3-4 days supplies</option>
+                        <option value="1">Basic items only</option>
+                        <option value="0">No emergency kit</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="home-secure">2. Is your home secured for strong winds?</label>
+                    <select id="home-secure" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, roof reinforced, windows secured, trees trimmed</option>
+                        <option value="2">Some measures taken</option>
+                        <option value="1">Minimal preparation</option>
+                        <option value="0">Not secured</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="pagasa-monitor">3. Do you monitor PAGASA typhoon bulletins?</label>
+                    <select id="pagasa-monitor" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, regularly check during typhoon season</option>
+                        <option value="2">Sometimes check</option>
+                        <option value="1">Rarely check</option>
+                        <option value="0">Never check</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="evacuation-ready">4. Are you prepared for evacuation?</label>
+                    <select id="evacuation-ready" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, know routes, have go-bag, plan ready</option>
+                        <option value="2">Have some preparation</option>
+                        <option value="1">Minimal preparation</option>
+                        <option value="0">Not prepared</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Typhoon Preparedness Checklist</h2>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Prepare 7-day emergency supply kit</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store clean water (1 gallon per person per day)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Stock non-perishable food items</label>
+                <label class="card"><input type="checkbox" class="check-item"> Secure or reinforce roof</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install storm shutters or board windows</label>
+                <label class="card"><input type="checkbox" class="check-item"> Trim trees and remove dead branches</label>
+                <label class="card"><input type="checkbox" class="check-item"> Secure outdoor furniture and objects</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know evacuation routes and centers</label>
+                <label class="card"><input type="checkbox" class="check-item"> Prepare go-bag with essentials</label>
+                <label class="card"><input type="checkbox" class="check-item"> Charge all electronic devices</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have battery-powered radio and flashlight</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store important documents in waterproof container</label>
+                <label class="card"><input type="checkbox" class="check-item"> Fill vehicle gas tank</label>
+                <label class="card"><input type="checkbox" class="check-item"> Monitor PAGASA bulletins regularly</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create family communication plan</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Typhoon Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Before Typhoon Season</h3>
+                    <ul>
+                        <li>Reinforce roof and secure loose materials</li>
+                        <li>Install storm shutters or prepare window coverings</li>
+                        <li>Trim trees and remove dead branches</li>
+                        <li>Clear gutters and drainage systems</li>
+                        <li>Prepare emergency supply kit (7-day minimum)</li>
+                        <li>Identify evacuation routes and centers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>When Typhoon Approaches</h3>
+                    <ul>
+                        <li>Monitor PAGASA bulletins and warnings</li>
+                        <li>Secure outdoor furniture and objects</li>
+                        <li>Fill containers with clean water</li>
+                        <li>Charge all electronic devices</li>
+                        <li>Prepare go-bag for evacuation</li>
+                        <li>Stay indoors and away from windows</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>During and After Typhoon</h3>
+                    <ul>
+                        <li>Stay indoors until authorities say it's safe</li>
+                        <li>Listen to battery-powered radio for updates</li>
+                        <li>Avoid flooded areas and downed power lines</li>
+                        <li>Check for injuries and provide first aid</li>
+                        <li>Inspect utilities before using</li>
+                        <li>Document damage for insurance claims</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Typhoon Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="44" data-label="Average typhoons entering PAR per year" data-trend="75">
+                    <h4>Annual Typhoons</h4>
+                    <span class="stat-value">0</span>
+                    <small>Philippine Area of Responsibility (PAGASA)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="8" data-label="Average destructive typhoons per year" data-trend="70">
+                    <h4>Destructive Typhoons</h4>
+                    <span class="stat-value">0</span>
+                    <small>Category 3 and above</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="20" data-label="Average fatalities per major typhoon" data-trend="65">
+                    <h4>Typhoon Fatalities</h4>
+                    <span class="stat-value">0</span>
+                    <small>Based on 2020-2024 data</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="6" data-label="Months of typhoon season (June-November)" data-trend="80">
+                    <h4>Typhoon Season</h4>
+                    <span class="stat-value">0</span>
+                    <small>Peak months: July-October</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/EEEk7GjONDs" 
+            frameborder="0" 
+            title="Typhoon Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Typhoon Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Build typhoon-resistant structures with reinforced roofs</li>
+                        <li>Install storm shutters and impact-resistant windows</li>
+                        <li>Improve drainage systems to prevent flooding</li>
+                        <li>Construct sea walls and breakwaters for coastal areas</li>
+                        <li>Install early warning systems and sirens</li>
+                        <li>Strengthen power and communication infrastructure</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Enforce building codes for typhoon resistance</li>
+                        <li>Conduct regular community preparedness drills</li>
+                        <li>Establish clear evacuation procedures</li>
+                        <li>Maintain mangrove forests for natural protection</li>
+                        <li>Public education on typhoon safety</li>
+                        <li>Coordination between LGUs and national agencies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Typhoon: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Warm Ocean Waters:</strong> Pacific Ocean temperatures above 26.5°C
+                        </td>
+                        <td>
+                            Strong winds, heavy rainfall, storm surge, flooding
+                        </td>
+                        <td>
+                            Infrastructure damage, agricultural loss, economic disruption
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Low Pressure Systems:</strong> Atmospheric conditions in tropical regions
+                        </td>
+                        <td>
+                            Cyclonic winds, torrential rains, widespread destruction
+                        </td>
+                        <td>
+                            Long-term recovery needs, displacement, supply chain disruption
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Geographic Location:</strong> Philippines in typhoon belt
+                        </td>
+                        <td>
+                            Frequent landfalls, coastal flooding, landslides
+                        </td>
+                        <td>
+                            Recurring damage, adaptation challenges, migration
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Climate Change:</strong> Increasing sea surface temperatures
+                        </td>
+                        <td>
+                            More intense typhoons, higher storm surges
+                        </td>
+                        <td>
+                            Increased vulnerability, adaptation costs, environmental impact
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Typhoons</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated emergency response</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8284-0800</h3>
+                    <p>PAGASA/DOST</p>
+                    <small>Typhoon bulletins and weather updates</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8911-5061</h3>
+                    <p>NDRRMC</p>
+                    <small>Typhoon response coordination</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Rescue and relief operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+</body>
+</html>
+

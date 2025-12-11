@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Disaster Preparedness</title>
+    <link rel="stylesheet" href="fire.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-fire">
+
+    <!-- YouTube Video Background -->
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/TObPhge66mM?autoplay=1&loop=1&playlist=TObPhge66mM&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=TObPhge66mM"
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-overlay"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <p class="badge">Fire Disaster Preparedness</p>
+            <h1>🔥 Fire Preparedness Guide</h1>
+            <p class="header-subtitle">Comprehensive information on fire prevention, response, and recovery strategies</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Fire Readiness Self-Assessment</h2>
+            <p>Evaluate your household's fire preparedness level</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="smoke-detectors">1. Do you have working smoke detectors installed?</label>
+                    <select id="smoke-detectors" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, on every floor and tested monthly</option>
+                        <option value="2">Yes, but not tested regularly</option>
+                        <option value="1">Only in some areas</option>
+                        <option value="0">No smoke detectors</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="fire-extinguisher">2. Do you have fire extinguishers?</label>
+                    <select id="fire-extinguisher" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, ABC type, accessible and family trained</option>
+                        <option value="2">Yes, but not trained on usage</option>
+                        <option value="1">Yes, but expired/not accessible</option>
+                        <option value="0">No fire extinguisher</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="escape-plan">3. Do you have a fire escape plan?</label>
+                    <select id="escape-plan" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, practiced with family regularly</option>
+                        <option value="2">Yes, but not practiced</option>
+                        <option value="1">Informal plan only</option>
+                        <option value="0">No escape plan</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="electrical-safety">4. How would you rate your electrical safety?</label>
+                    <select id="electrical-safety" required>
+                        <option value="">Choose</option>
+                        <option value="3">Regular inspections, no overloaded circuits</option>
+                        <option value="2">Some precautions taken</option>
+                        <option value="1">Minimal safety measures</option>
+                        <option value="0">No safety measures</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Fire Preparedness Checklist</h2>
+            <p>Complete these tasks to improve your fire safety</p>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Install smoke detectors on every floor</label>
+                <label class="card"><input type="checkbox" class="check-item"> Test smoke detectors monthly</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install fire extinguishers (ABC type)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Learn how to use fire extinguisher (PASS method)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create and practice fire escape plan</label>
+                <label class="card"><input type="checkbox" class="check-item"> Identify two escape routes from each room</label>
+                <label class="card"><input type="checkbox" class="check-item"> Designate a meeting point outside</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep flammable materials away from heat sources</label>
+                <label class="card"><input type="checkbox" class="check-item"> Check electrical wiring regularly</label>
+                <label class="card"><input type="checkbox" class="check-item"> Avoid overloading electrical outlets</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep matches and lighters out of children's reach</label>
+                <label class="card"><input type="checkbox" class="check-item"> Never leave cooking unattended</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store important documents in fireproof safe</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know emergency numbers (911, BFP)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install fire-resistant doors where possible</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Fire Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Prevention Measures</h3>
+                    <ul>
+                        <li>Install smoke detectors on every floor and in bedrooms</li>
+                        <li>Test smoke detectors monthly and replace batteries annually</li>
+                        <li>Keep flammable materials away from heat sources</li>
+                        <li>Never leave cooking, candles, or heaters unattended</li>
+                        <li>Maintain electrical systems and avoid overloading circuits</li>
+                        <li>Store matches and lighters safely away from children</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Emergency Planning</h3>
+                    <ul>
+                        <li>Create a detailed fire escape plan with two routes per room</li>
+                        <li>Practice fire drills with family every 6 months</li>
+                        <li>Designate a safe meeting point outside your home</li>
+                        <li>Teach children how to call 911 and what to say</li>
+                        <li>Keep fire extinguishers accessible and know how to use them</li>
+                        <li>Plan for pets and elderly family members</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Safety Equipment</h3>
+                    <ul>
+                        <li>Install ABC-type fire extinguishers in kitchen and garage</li>
+                        <li>Consider fire sprinkler systems for added protection</li>
+                        <li>Keep fire blankets in kitchen for grease fires</li>
+                        <li>Maintain fire-resistant doors and windows</li>
+                        <li>Have emergency ladders for upper floors</li>
+                        <li>Store important documents in fireproof containers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Fire Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="15000" data-label="Average fires per year" data-trend="75">
+                    <h4>Annual Fire Incidents</h4>
+                    <span class="stat-value">0</span>
+                    <small>Based on BFP data (2020-2023)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="250" data-label="Average fatalities per year" data-trend="60">
+                    <h4>Fire-Related Fatalities</h4>
+                    <span class="stat-value">0</span>
+                    <small>Most occur in residential areas</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="35" data-label="Percent caused by electrical faults" data-trend="80">
+                    <h4>Electrical Fires</h4>
+                    <span class="stat-value">0</span>
+                    <small>Leading cause of fires</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="22" data-label="Percent caused by cooking" data-trend="70">
+                    <h4>Cooking-Related Fires</h4>
+                    <span class="stat-value">0</span>
+                    <small>Second leading cause</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+  <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/-F6zPv7ak4Y" 
+            frameborder="0" 
+            title="Fire Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Fire Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Install automatic fire suppression systems (sprinklers)</li>
+                        <li>Use fire-resistant building materials</li>
+                        <li>Install fire doors and fire-resistant windows</li>
+                        <li>Maintain proper electrical systems with circuit breakers</li>
+                        <li>Install smoke and heat detection systems</li>
+                        <li>Keep fire extinguishers in accessible locations</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Enforce no-smoking policies in high-risk areas</li>
+                        <li>Conduct regular fire drills and training</li>
+                        <li>Establish clear evacuation procedures</li>
+                        <li>Maintain clear exit paths and emergency lighting</li>
+                        <li>Regular inspection and maintenance of fire safety equipment</li>
+                        <li>Community fire safety education programs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Fire: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Electrical Faults:</strong> Overloaded circuits, faulty wiring, damaged appliances
+                        </td>
+                        <td>
+                            Rapid spread of flames, smoke inhalation, structural damage
+                        </td>
+                        <td>
+                            Property loss, displacement, business interruption, PTSD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Cooking Accidents:</strong> Unattended cooking, grease fires, flammable materials near stove
+                        </td>
+                        <td>
+                            Kitchen fires, burns, smoke damage, potential explosions
+                        </td>
+                        <td>
+                            Home destruction, medical expenses, loss of personal belongings
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Open Flames:</strong> Candles, matches, lighters, cigarettes
+                        </td>
+                        <td>
+                            Ignition of flammable materials, rapid fire spread
+                        </td>
+                        <td>
+                            Complete property loss, injuries, fatalities
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Flammable Storage:</strong> Improper storage of gasoline, chemicals, combustible materials
+                        </td>
+                        <td>
+                            Explosions, toxic fumes, rapid fire escalation
+                        </td>
+                        <td>
+                            Environmental contamination, severe injuries, community impact
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Fire</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated response for fire, police, medical emergencies</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>117</h3>
+                    <p>Bureau of Fire Protection (BFP)</p>
+                    <small>Direct fire emergency line - Available 24/7</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3-1>02-8911-5061</h3>
+                    <p>NDRRMC Operations Center</p>
+                    <small>Disaster response coordination</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Emergency assistance and relief operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+
+    <body class="disaster-fire">
+
+    <!-- 🔥 LIVE BACKGROUND VIDEO -->
+    <video id="live-bg" autoplay muted loop playsinline>
+        <source src="your-fire-video.mp4" type="video/mp4">
+    </video>
+
+
+</body>
+</html>
+

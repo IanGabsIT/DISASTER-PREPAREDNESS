@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Disaster Preparedness</title>
+    <link rel="stylesheet" href="earthquake.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-earthquake">
+
+<!-- YouTube Video Background -->
+<div class="video-background">
+    <iframe 
+        src="https://www.youtube.com/embed/q7feC-tX1hI?autoplay=1&loop=1&playlist=q7feC-tX1hI&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+    <div class="video-overlay"></div>
+</div>
+
+    <header>
+        <div class="header-content">
+            <p class="badge">Earthquake Disaster Preparedness</p>
+            <h1>🌍 Earthquake Preparedness Guide</h1>
+            <p class="header-subtitle">Essential information for surviving and recovering from earthquakes</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Earthquake Readiness Self-Assessment</h2>
+            <p>Evaluate your earthquake preparedness</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="secure-furniture">1. Have you secured heavy furniture and appliances?</label>
+                    <select id="secure-furniture" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, all heavy items secured to walls</option>
+                        <option value="2">Some items secured</option>
+                        <option value="1">Planning to secure</option>
+                        <option value="0">Not secured</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="emergency-kit">2. Do you have an earthquake emergency kit?</label>
+                    <select id="emergency-kit" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, complete 72-hour kit ready</option>
+                        <option value="2">Partial kit available</option>
+                        <option value="1">Basic items only</option>
+                        <option value="0">No emergency kit</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="drill-practice">3. Have you practiced Drop, Cover, and Hold?</label>
+                    <select id="drill-practice" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, practiced regularly with family</option>
+                        <option value="2">Practiced once or twice</option>
+                        <option value="1">Know the technique but not practiced</option>
+                        <option value="0">Not familiar</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="structural-knowledge">4. Do you know if your building is earthquake-resistant?</label>
+                    <select id="structural-knowledge" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, verified by engineer</option>
+                        <option value="2">Believe it is, not verified</option>
+                        <option value="1">Uncertain</option>
+                        <option value="0">No knowledge</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Earthquake Preparedness Checklist</h2>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Secure heavy furniture to walls</label>
+                <label class="card"><input type="checkbox" class="check-item"> Anchor tall bookcases and cabinets</label>
+                <label class="card"><input type="checkbox" class="check-item"> Secure water heater and gas appliances</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install latches on cabinet doors</label>
+                <label class="card"><input type="checkbox" class="check-item"> Prepare 72-hour emergency kit</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store emergency supplies in accessible location</label>
+                <label class="card"><input type="checkbox" class="check-item"> Practice Drop, Cover, and Hold drills</label>
+                <label class="card"><input type="checkbox" class="check-item"> Identify safe spots in each room</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know how to shut off gas, water, electricity</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create family communication plan</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep important documents in waterproof container</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have battery-powered radio and flashlight</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store first aid kit and medications</label>
+                <label class="card"><input type="checkbox" class="check-item"> Plan evacuation routes from home</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know PHIVOLCS alert system</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Earthquake Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Before an Earthquake</h3>
+                    <ul>
+                        <li>Secure heavy furniture, appliances, and fixtures to walls</li>
+                        <li>Store breakable items on lower shelves</li>
+                        <li>Install latches on cabinet doors</li>
+                        <li>Anchor water heater and gas appliances</li>
+                        <li>Prepare emergency supply kit (72-hour minimum)</li>
+                        <li>Learn how to shut off gas, water, and electricity</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>During an Earthquake</h3>
+                    <ul>
+                        <li>DROP to the ground immediately</li>
+                        <li>Take COVER under sturdy furniture or against interior wall</li>
+                        <li>HOLD ON until shaking stops</li>
+                        <li>Stay away from windows, glass, and heavy objects</li>
+                        <li>If outdoors, move to open area away from buildings</li>
+                        <li>If in vehicle, stop in safe area and stay inside</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>After an Earthquake</h3>
+                    <ul>
+                        <li>Check for injuries and provide first aid</li>
+                        <li>Check for gas leaks and shut off if needed</li>
+                        <li>Inspect utilities and shut off if damaged</li>
+                        <li>Listen to battery-powered radio for updates</li>
+                        <li>Be prepared for aftershocks</li>
+                        <li>Avoid damaged buildings and areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Earthquake Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="20" data-label="Average significant earthquakes per year" data-trend="70">
+                    <h4>Annual Earthquakes</h4>
+                    <span class="stat-value">0</span>
+                    <small>Magnitude 5.0 and above (PHIVOLCS)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="7.3" data-label="Average magnitude of major quakes" data-trend="65">
+                    <h4>Major Earthquake Magnitude</h4>
+                    <span class="stat-value">0</span>
+                    <small>Top 5 events 2020-2024</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="5" data-label="Active fault systems in the Philippines" data-trend="80">
+                    <h4>Active Fault Systems</h4>
+                    <span class="stat-value">0</span>
+                    <small>Including Philippine Fault System</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="90" data-label="Percent of population in earthquake-prone areas" data-trend="75">
+                    <h4>At-Risk Population</h4>
+                    <span class="stat-value">0</span>
+                    <small>Living in seismic zones</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/I0ureVMVzP8" 
+            frameborder="0" 
+            title="Earthquake Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+
+
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Earthquake Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Retrofit buildings with base isolators and shear walls</li>
+                        <li>Follow Building Code standards for seismic design</li>
+                        <li>Install flexible gas and water connections</li>
+                        <li>Use earthquake-resistant construction materials</li>
+                        <li>Secure building foundations and structural elements</li>
+                        <li>Install automatic gas shutoff valves</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Conduct regular earthquake drills in schools and workplaces</li>
+                        <li>Enforce building code compliance</li>
+                        <li>Establish early warning systems</li>
+                        <li>Community earthquake preparedness programs</li>
+                        <li>Regular inspection of infrastructure</li>
+                        <li>Public education on earthquake safety</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Earthquake: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Tectonic Plate Movement:</strong> Philippine Fault System, subduction zones
+                        </td>
+                        <td>
+                            Ground shaking, building collapse, landslides, liquefaction
+                        </td>
+                        <td>
+                            Infrastructure damage, economic loss, displacement, PTSD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Volcanic Activity:</strong> Magma movement beneath volcanoes
+                        </td>
+                        <td>
+                            Volcanic earthquakes, ground deformation
+                        </td>
+                        <td>
+                            Volcanic eruption risk, evacuation needs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Human Activities:</strong> Mining, reservoir-induced seismicity
+                        </td>
+                        <td>
+                            Minor to moderate shaking in specific areas
+                        </td>
+                        <td>
+                            Structural damage, environmental impact
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Tsunami Generation:</strong> Undersea earthquakes
+                        </td>
+                        <td>
+                            Large ocean waves, coastal flooding
+                        </td>
+                        <td>
+                            Widespread destruction, loss of life, coastal damage
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Earthquakes</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated emergency response</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8426-1468</h3>
+                    <p>PHIVOLCS</p>
+                    <small>Philippine Institute of Volcanology and Seismology - Earthquake information</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8911-5061</h3>
+                    <p>NDRRMC</p>
+                    <small>National Disaster Risk Reduction and Management Council</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Emergency assistance and rescue operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+</body>
+</html>
+

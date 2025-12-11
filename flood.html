@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Disaster Preparedness</title>
+    <link rel="stylesheet" href="flood.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-flood">
+
+   <!-- YouTube Video Background -->
+<div class="video-background">
+    <iframe 
+        src="https://www.youtube.com/embed/HqXXbjN-hhs?autoplay=1&mute=1&loop=1&playlist=HqXXbjN-hhs&controls=0&rel=0&showinfo=0&iv_load_policy=3"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+    <div class="video-overlay"></div>
+</div>
+
+
+    <header>
+        <div class="header-content">
+            <p class="badge">Flood Disaster Preparedness</p>
+            <h1>💧 Flood Preparedness Guide</h1>
+            <p class="header-subtitle">Essential strategies for flood prevention, response, and recovery</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Flood Readiness Self-Assessment</h2>
+            <p>Evaluate your flood preparedness level</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="flood-risk">1. Do you know your area's flood risk level?</label>
+                    <select id="flood-risk" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, checked flood maps and know evacuation routes</option>
+                        <option value="2">Generally aware of risk</option>
+                        <option value="1">Uncertain about risk level</option>
+                        <option value="0">No knowledge of flood risk</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="elevation">2. Is your home elevated or flood-proofed?</label>
+                    <select id="elevation" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, elevated or flood-proofed</option>
+                        <option value="2">Partially protected</option>
+                        <option value="1">Some measures taken</option>
+                        <option value="0">No protection measures</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="flood-kit">3. Do you have a flood emergency kit?</label>
+                    <select id="flood-kit" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, complete kit with 72-hour supplies</option>
+                        <option value="2">Partial kit available</option>
+                        <option value="1">Basic items only</option>
+                        <option value="0">No emergency kit</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="evacuation-plan">4. Do you have a flood evacuation plan?</label>
+                    <select id="evacuation-plan" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, practiced with family and know routes</option>
+                        <option value="2">Have a plan but not practiced</option>
+                        <option value="1">Informal plan only</option>
+                        <option value="0">No evacuation plan</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Flood Preparedness Checklist</h2>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Know your area's flood risk</label>
+                <label class="card"><input type="checkbox" class="check-item"> Identify evacuation routes to higher ground</label>
+                <label class="card"><input type="checkbox" class="check-item"> Prepare flood emergency kit</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store important documents in waterproof container</label>
+                <label class="card"><input type="checkbox" class="check-item"> Elevate electrical panels and appliances</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install sump pump if in basement</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep sandbags ready for barriers</label>
+                <label class="card"><input type="checkbox" class="check-item"> Clear gutters and drainage systems</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have battery-powered radio and flashlight</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store clean water (1 gallon per person per day)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create family communication plan</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know how to shut off utilities</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep vehicle fueled and ready</label>
+                <label class="card"><input type="checkbox" class="check-item"> Monitor weather alerts and warnings</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have waterproof bags for electronics</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Flood Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Before a Flood</h3>
+                    <ul>
+                        <li>Know your area's flood risk and evacuation routes</li>
+                        <li>Elevate electrical panels, water heaters, and appliances</li>
+                        <li>Install check valves to prevent backflow</li>
+                        <li>Clear gutters, drains, and drainage systems</li>
+                        <li>Prepare emergency kit with 72-hour supplies</li>
+                        <li>Store important documents in waterproof containers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>During a Flood</h3>
+                    <ul>
+                        <li>Move to higher ground immediately</li>
+                        <li>Never walk or drive through floodwaters</li>
+                        <li>Evacuate if authorities recommend</li>
+                        <li>Turn off utilities at main switches if safe</li>
+                        <li>Stay away from downed power lines</li>
+                        <li>Listen to battery-powered radio for updates</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>After a Flood</h3>
+                    <ul>
+                        <li>Return home only when authorities say it's safe</li>
+                        <li>Avoid floodwaters - may be contaminated</li>
+                        <li>Inspect utilities before turning on</li>
+                        <li>Clean and disinfect everything that got wet</li>
+                        <li>Document damage for insurance claims</li>
+                        <li>Watch for health issues from contaminated water</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Flood Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="2130" data-label="Barangays affected by severe flooding" data-trend="75">
+                    <h4>Affected Barangays</h4>
+                    <span class="stat-value">0</span>
+                    <small>Q3 2024 peak (NDRRMC data)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="60" data-label="Percent of annual disasters are floods" data-trend="70">
+                    <h4>Flood Frequency</h4>
+                    <span class="stat-value">0</span>
+                    <small>Most common disaster type</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="18" data-label="Major river basins prone to flooding" data-trend="65">
+                    <h4>Flood-Prone Basins</h4>
+                    <span class="stat-value">0</span>
+                    <small>Including Pasig, Marikina, Cagayan</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="85" data-label="Percent of Metro Manila at flood risk" data-trend="80">
+                    <h4>Metro Manila Risk</h4>
+                    <span class="stat-value">0</span>
+                    <small>High flood vulnerability</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+  <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/rV1iqRD9EKY" 
+            frameborder="0" 
+            title="Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Flood Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Build flood barriers and levees</li>
+                        <li>Improve drainage systems and infrastructure</li>
+                        <li>Install flood gates and pumps</li>
+                        <li>Elevate buildings and critical infrastructure</li>
+                        <li>Create retention ponds and green spaces</li>
+                        <li>Implement early warning systems</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Enforce no-build zones in floodplains</li>
+                        <li>Implement proper waste management</li>
+                        <li>Maintain and clear drainage systems regularly</li>
+                        <li>Community flood preparedness programs</li>
+                        <li>Land use planning and zoning regulations</li>
+                        <li>Public education on flood risks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Flood: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Heavy Rainfall:</strong> Monsoon rains, typhoons, continuous precipitation
+                        </td>
+                        <td>
+                            Water overflow, inundation, flash floods, property damage
+                        </td>
+                        <td>
+                            Infrastructure damage, crop loss, waterborne diseases, displacement
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Poor Drainage:</strong> Clogged systems, inadequate infrastructure
+                        </td>
+                        <td>
+                            Urban flooding, traffic disruption, water stagnation
+                        </td>
+                        <td>
+                            Health hazards, economic losses, infrastructure decay
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>River Overflow:</strong> Excessive water volume exceeding capacity
+                        </td>
+                        <td>
+                            Widespread flooding, agricultural damage, displacement
+                        </td>
+                        <td>
+                            Long-term agricultural impact, economic disruption
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Storm Surge:</strong> Coastal flooding from typhoons
+                        </td>
+                        <td>
+                            Coastal inundation, saltwater intrusion, property destruction
+                        </td>
+                        <td>
+                            Coastal erosion, ecosystem damage, relocation needs
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Floods</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated emergency response</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8284-0800</h3>
+                    <p>PAGASA/DOST</p>
+                    <small>Weather and flood advisories</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8911-5061</h3>
+                    <p>NDRRMC</p>
+                    <small>Flood response coordination</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Rescue and relief operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+</body>
+</html>
+

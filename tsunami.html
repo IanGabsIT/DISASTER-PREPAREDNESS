@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsunami Disaster Preparedness</title>
+    <link rel="stylesheet" href="tsunami.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-tsunami">
+
+    <!-- YouTube Video Background -->
+<div class="video-background">
+    <iframe 
+        src="https://www.youtube.com/embed/Cpx6FipfbbQ?autoplay=1&mute=1&loop=1&playlist=Cpx6FipfbbQ&controls=0&rel=0&showinfo=0&iv_load_policy=3"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+
+    <div class="video-overlay"></div>
+</div>
+
+    
+    <header>
+        <div class="header-content">
+            <p class="badge">Tsunami Disaster Preparedness</p>
+            <h1>🌊 Tsunami Preparedness Guide</h1>
+            <p class="header-subtitle">Critical information for tsunami early warning, evacuation, and survival</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Tsunami Readiness Self-Assessment</h2>
+            <p>Evaluate your tsunami preparedness</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="coastal-proximity">1. Do you live in a coastal area at tsunami risk?</label>
+                    <select id="coastal-proximity" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, know elevation and evacuation routes</option>
+                        <option value="2">Live near coast but uncertain of risk</option>
+                        <option value="1">Not in immediate coastal area</option>
+                        <option value="0">No knowledge of tsunami risk</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="warning-signs">2. Can you recognize natural tsunami warning signs?</label>
+                    <select id="warning-signs" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, know all natural warning signs</option>
+                        <option value="2">Know some warning signs</option>
+                        <option value="1">Basic knowledge only</option>
+                        <option value="0">No knowledge</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="evacuation-route">3. Do you know your tsunami evacuation route?</label>
+                    <select id="evacuation-route" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, practiced route to high ground</option>
+                        <option value="2">Know general direction</option>
+                        <option value="1">Uncertain about route</option>
+                        <option value="0">No evacuation route identified</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="early-warning">4. Are you connected to tsunami early warning systems?</label>
+                    <select id="early-warning" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, multiple alert methods (sirens, phone, radio)</option>
+                        <option value="2">Some alert methods available</option>
+                        <option value="1">Limited alert access</option>
+                        <option value="0">No early warning access</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Tsunami Preparedness Checklist</h2>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Know your elevation above sea level</label>
+                <label class="card"><input type="checkbox" class="check-item"> Identify evacuation routes to high ground</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know natural tsunami warning signs</label>
+                <label class="card"><input type="checkbox" class="check-item"> Register for tsunami alerts (phone, SMS)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Practice evacuation route regularly</label>
+                <label class="card"><input type="checkbox" class="check-item"> Identify safe zones (30+ meters elevation)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Prepare go-bag for quick evacuation</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have battery-powered radio for alerts</label>
+                <label class="card"><input type="checkbox" class="check-item"> Store important documents in waterproof container</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know how to recognize earthquake (tsunami trigger)</label>
+                <label class="card"><input type="checkbox" class="check-item"> Understand sea withdrawal warning sign</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create family communication plan</label>
+                <label class="card"><input type="checkbox" class="check-item"> Keep vehicle fueled and ready</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know emergency hotlines</label>
+                <label class="card"><input type="checkbox" class="check-item"> Coordinate with barangay DRRM office</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Tsunami Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Before a Tsunami</h3>
+                    <ul>
+                        <li>Know your elevation and distance from coast</li>
+                        <li>Identify evacuation routes to high ground (30+ meters)</li>
+                        <li>Practice evacuation route with family</li>
+                        <li>Register for tsunami early warning alerts</li>
+                        <li>Learn natural warning signs (earthquake, sea withdrawal)</li>
+                        <li>Prepare go-bag for quick evacuation</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Natural Warning Signs</h3>
+                    <ul>
+                        <li>Strong earthquake that lasts 20+ seconds</li>
+                        <li>Unusual sea behavior (rapid withdrawal)</li>
+                        <li>Loud ocean roar or rumbling sound</li>
+                        <li>Rapid rise or fall of coastal water</li>
+                        <li>Official tsunami warning issued</li>
+                        <li>Ground shaking near coast</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>During Tsunami Warning</h3>
+                    <ul>
+                        <li>Evacuate immediately - don't wait for official warning</li>
+                        <li>Move to high ground (30+ meters) or inland</li>
+                        <li>Go on foot if possible - avoid traffic</li>
+                        <li>Never go to coast to watch tsunami</li>
+                        <li>Stay away from rivers leading to sea</li>
+                        <li>Follow vertical evacuation if in building</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Tsunami Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="40" data-label="Tsunami events recorded in history" data-trend="70">
+                    <h4>Historical Tsunamis</h4>
+                    <span class="stat-value">0</span>
+                    <small>Since 1600s (PHIVOLCS)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="90" data-label="Percent triggered by earthquakes" data-trend="75">
+                    <h4>Earthquake-Triggered</h4>
+                    <span class="stat-value">0</span>
+                    <small>Most common cause</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="8000" data-label="People killed in 1976 Moro Gulf tsunami" data-trend="65">
+                    <h4>Deadliest Tsunami</h4>
+                    <span class="stat-value">0</span>
+                    <small>1976 Moro Gulf event</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="36" data-label="Coastal provinces at tsunami risk" data-trend="80">
+                    <h4>At-Risk Provinces</h4>
+                    <span class="stat-value">0</span>
+                    <small>Coastal areas vulnerable</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+     <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/VJcSgTV46Eo" 
+            frameborder="0" 
+            title="Tsunami Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Tsunami Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Build tsunami-resistant structures and sea walls</li>
+                        <li>Install early warning systems and sirens</li>
+                        <li>Create vertical evacuation structures</li>
+                        <li>Establish clear evacuation routes and signage</li>
+                        <li>Install tsunami detection buoys</li>
+                        <li>Build breakwaters and coastal barriers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Enforce no-build zones in high-risk coastal areas</li>
+                        <li>Conduct regular tsunami evacuation drills</li>
+                        <li>Public education on natural warning signs</li>
+                        <li>Establish clear evacuation procedures</li>
+                        <li>Community tsunami awareness programs</li>
+                        <li>Coordination between PHIVOLCS and coastal LGUs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Tsunami: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Undersea Earthquakes:</strong> Subduction zone earthquakes displacing ocean floor
+                        </td>
+                        <td>
+                            High-speed ocean waves, coastal inundation, massive destruction
+                        </td>
+                        <td>
+                            Widespread property loss, displacement, economic devastation, PTSD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Volcanic Eruptions:</strong> Underwater volcanic activity
+                        </td>
+                        <td>
+                            Volcanic tsunamis, coastal flooding, debris impact
+                        </td>
+                        <td>
+                            Combined volcanic and tsunami damage, long recovery
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Landslides:</strong> Underwater or coastal landslides
+                        </td>
+                        <td>
+                            Localized tsunamis, coastal impact, debris flows
+                        </td>
+                        <td>
+                            Coastal erosion, infrastructure damage, relocation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Meteorite Impact:</strong> Rare but possible ocean impact
+                        </td>
+                        <td>
+                            Massive waves, widespread coastal destruction
+                        </td>
+                        <td>
+                            Catastrophic damage, long-term environmental impact
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Tsunamis</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated emergency response</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8426-1468</h3>
+                    <p>PHIVOLCS</p>
+                    <small>Tsunami warnings and earthquake information</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8911-5061</h3>
+                    <p>NDRRMC</p>
+                    <small>Tsunami response coordination</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Rescue and relief operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+</body>
+</html>
+

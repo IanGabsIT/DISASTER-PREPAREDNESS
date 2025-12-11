@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Preparedness Hub</title>
+  <link rel="stylesheet" href="disaster.css">
+</head>
+<body>
+  <header>
+    <p class="badge">Philippines · All hazards approach</p>
+    <h1>Disaster Preparedness Command Center</h1>
+    <p>High-order thinking toolkit for anticipating hazards, reducing vulnerabilities, and accelerating recovery. Analyze risks, plan resilient systems, and empower your community before, during, and after catastrophic events.</p>
+  </header>
+
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="#self-assessment">Self Assessment</a></li>
+      <li><a href="#checklist">Checklist</a></li>
+      <li><a href="common-disasters.html">Common Disasters</a></li>
+      <li><a href="#preparedness">Preparation</a></li>
+      <li><a href="#stats">Statistics</a></li>
+      <li><a href="#mitigation">Mitigation</a></li>
+      <li><a href="#cause-effect">Cause & Effect</a></li>
+      <li><a href="#hotlines">Hotlines</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="self-assessment" class="self-test">
+      <p class="badge">Situational Awareness</p>
+      <h2>Rapid Readiness Self-Assessment</h2>
+      <p>Evaluate household or institutional readiness. Scores translate into immediate action prompts and resource recommendations.</p>
+
+      <form id="assessmentForm">
+        <div class="question">
+          <label for="plan">1. Do you have a written disaster plan reviewed in the last 6 months?</label>
+          <select id="plan" required>
+            <option value="">Choose</option>
+            <option value="3">Yes, updated quarterly</option>
+            <option value="2">Yes, but outdated</option>
+            <option value="1">Draft only</option>
+            <option value="0">No plan</option>
+          </select>
+        </div>
+        <div class="question">
+          <label>2. Supplies per person (water, food, meds):</label>
+          <div class="chip-row">
+            <label><input type="radio" name="supplies" value="3" required> 7+ days</label>
+            <label><input type="radio" name="supplies" value="2"> 3-6 days</label>
+            <label><input type="radio" name="supplies" value="1"> 1-2 days</label>
+            <label><input type="radio" name="supplies" value="0"> None</label>
+          </div>
+        </div>
+        <div class="question">
+          <label for="training">3. Percentage of household trained in basic first aid & DRRM</label>
+          <input type="range" id="training" min="0" max="100" step="10" value="20">
+          <small id="trainingOutput">20%</small>
+        </div>
+        <div class="question">
+          <label for="notes">4. Describe your top hazard scenario and current constraint:</label>
+          <textarea id="notes" rows="3" placeholder="e.g., Flooding due to nearby river; limited elevated storage."></textarea>
+        </div>
+        <button type="submit">Generate Readiness Score</button>
+      </form>
+
+      <div id="assessmentResult" class="result" role="alert">
+        <strong>Readiness Score: <span id="scoreValue">0</span>/10</strong>
+        <p id="scoreMessage"></p>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <p class="badge">Operational Checklist</p>
+      <h2>Preparedness Checklist Tracker</h2>
+      <p>Tick each completed task to visualize household or campus readiness. Aim for ≥ 80% before typhoon season.</p>
+      <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+      <p id="progressLabel">0% complete</p>
+
+      <div class="grid grid-2">
+        <label class="card"><input type="checkbox" class="check-item"> Early-warning alerts configured (text, siren, app)</label>
+        <label class="card"><input type="checkbox" class="check-item"> Go-bag packed with IDs, cash, meds, flash drive</label>
+        <label class="card"><input type="checkbox" class="check-item"> Evacuation routes + safe zones mapped</label>
+        <label class="card"><input type="checkbox" class="check-item"> Home hazard audit (electrical, structural, fire)</label>
+        <label class="card"><input type="checkbox" class="check-item"> Family communication tree rehearsed</label>
+        <label class="card"><input type="checkbox" class="check-item"> Emergency supplies rotated (expiry check)</label>
+        <label class="card"><input type="checkbox" class="check-item"> Insurance / vital documents digitized</label>
+        <label class="card"><input type="checkbox" class="check-item"> Community volunteer roster confirmed</label>
+      </div>
+    </section>
+
+    <section id="disasters">
+      <p class="badge">Hazard Intelligence</p>
+      <h2>Common Disasters in the Philippines</h2>
+      <p>Analyze seven high-impact hazards. Each module covers primary triggers, cascading effects, preparedness strategies, mitigation levers, and dual video references for deeper study.</p>
+      <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+        <h3>Explore Common Disasters</h3>
+        <p>Learn about Fire, Earthquake, Flood, Typhoon, Landslide, Volcanic Eruption, and Tsunami with detailed information, preparedness strategies, and educational videos.</p>
+        <a href="common-disasters.html" class="button" style="display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: #0066cc; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">View All Common Disasters →</a>
+      </div>
+    </section>
+
+    <section id="preparedness">
+      <p class="badge">Ways to Be Prepared</p>
+      <h2>Preparedness Playbook</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Anticipate</h3>
+          <ul>
+            <li>Use GeoRiskPH and NOAH to layer hazards with assets.</li>
+            <li>Run worst-case scenario planning every quarter.</li>
+            <li>Create redundancy: power, comms, supply, leadership.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Absorb</h3>
+          <ul>
+            <li>Invest in resilient infrastructure (green roofs, permeable pavements).</li>
+            <li>Adopt modular shelters, floating storage for floods.</li>
+            <li>Strengthen social protection (cash-for-work, microinsurance).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Adapt</h3>
+          <ul>
+            <li>Conduct after-action reviews within 72 hours post-event.</li>
+            <li>Update policies based on community-led data.</li>
+            <li>Integrate mental health first aid into recovery.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats">
+      <p class="badge">Statistics Report</p>
+      <h2>Data Pulse: 2023-2024 Snapshot</h2>
+      <p>Figures combine PAGASA, PHIVOLCS, and NDRRMC reports. Use them to justify investments and target high-risk sectors.</p>
+
+      <div class="stats-grid">
+        <div class="card stat-card" data-value="44" data-label="Avg typhoons entering PAR / year" data-trend="80">
+          <h4>Typhoons / Year</h4>
+          <span class="stat-value">0</span>
+          <small>44-year average • 8 become destructive</small>
+          <div class="spark"><span></span></div>
+        </div>
+        <div class="card stat-card" data-value="2130" data-label="Barangays with severe flooding" data-trend="65">
+          <h4>Barangays Flooded</h4>
+          <span class="stat-value">0</span>
+          <small>Q3 2024 peak</small>
+          <div class="spark"><span></span></div>
+        </div>
+        <div class="card stat-card" data-value="7.3" data-label="Average significant earthquake magnitude" data-trend="55">
+          <h4>Quake Magnitude</h4>
+          <span class="stat-value">0</span>
+          <small>Top 5 events 2023-24</small>
+          <div class="spark"><span></span></div>
+        </div>
+        <div class="card stat-card" data-value="68" data-label="Percent of LGUs with DRRM offices" data-trend="40">
+          <h4>LGU DRRM Coverage</h4>
+          <span class="stat-value">0</span>
+          <small>Still below national target of 100%</small>
+          <div class="spark"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mitigation">
+      <p class="badge">Mitigation Strategies</p>
+      <h2>Ways to Mitigate Accidents & Secondary Crises</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Structural & Technological</h3>
+          <ul>
+            <li>Install automatic shutoff valves (gas/water) triggered by sensors.</li>
+            <li>Adopt smart meters + thermal imaging for early fire detection.</li>
+            <li>Retrofit bridges/buildings with base isolators and flood vents.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Behavioral & Policy</h3>
+          <ul>
+            <li>Institute zero-burn policies, enforce no-build zones.</li>
+            <li>Mandate quarterly integrated drills (earthquake + fire + evacuation).</li>
+            <li>Provide micro-grants for community risk reduction innovations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cause-effect">
+      <p class="badge">Analytical Mapping</p>
+      <h2>Cause and Effect Crosswalk</h2>
+      <p>Connect root causes to cascading effects to prioritize systemic interventions.</p>
+      <table class="cause-effect-table">
+        <thead>
+          <tr>
+            <th>Disaster Type</th>
+            <th>Primary Causes</th>
+            <th>Immediate Effects</th>
+            <th>Long-term Consequences</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fire</td>
+            <td>Electrical faults, flammable storage</td>
+            <td>Rapid structural damage, casualties</td>
+            <td>Homelessness, business shutdowns, PTSD</td>
+          </tr>
+          <tr>
+            <td>Earthquake</td>
+            <td>Tectonic plate movement</td>
+            <td>Collapse, liquefaction, tsunamis</td>
+            <td>Economic loss, migration, seismic retrofits</td>
+          </tr>
+          <tr>
+            <td>Flood</td>
+            <td>Extreme rain, poor drainage</td>
+            <td>Inundation, waterborne diseases</td>
+            <td>Agricultural loss, infrastructure decay</td>
+          </tr>
+          <tr>
+            <td>Typhoon</td>
+            <td>Warm ocean temps, low pressure</td>
+            <td>Strong winds, storm surge</td>
+            <td>Supply chain delays, power instability</td>
+          </tr>
+          <tr>
+            <td>Landslide</td>
+            <td>Saturated slopes, human excavation</td>
+            <td>Burial, transport blockage</td>
+            <td>Relocation, watershed damage</td>
+          </tr>
+          <tr>
+            <td>Volcanic Eruption</td>
+            <td>Magma pressure, tectonic shifts</td>
+            <td>Ashfall, pyroclastic flows</td>
+            <td>Climate impact, lahar risk, tourism slump</td>
+          </tr>
+          <tr>
+            <td>Tsunami</td>
+            <td>Subduction earthquakes</td>
+            <td>High-speed inundation</td>
+            <td>Salinization, fisheries collapse</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="hotlines">
+      <p class="badge">Philippine Hotlines</p>
+      <h2>Critical Emergency Contacts</h2>
+      <div class="hotlines">
+        <div class="card hotline-card">
+          <h3>911</h3>
+          <p>National Emergency Hotline</p>
+          <small>Integrated response for police, fire, medical</small>
+        </div>
+        <div class="card hotline-card">
+          <h3>02-8911-5061</h3>
+          <p>Philippine Red Cross Operations Center</p>
+          <small>Blood services, rescue teams, relief coordination</small>
+        </div>
+        <div class="card hotline-card">
+          <h3>02-8426-1468 / 146</h3>
+          <p>NDRRMC</p>
+          <small>Situation reports, resource requests</small>
+        </div>
+        <div class="card hotline-card">
+          <h3>02-8288-6688</h3>
+          <p>PAGASA/DOST Weather Hotline</p>
+          <small>Typhoon, flood, and storm surge advisories</small>
+        </div>
+        <div class="card hotline-card">
+          <h3>02-8927-3686</h3>
+          <p>PHIVOLCS</p>
+          <small>Earthquake & volcano quick reports</small>
+        </div>
+        <div class="card hotline-card">
+          <h3>117 or 134</h3>
+          <p>BFP & PNP</p>
+          <small>Fire suppression, evacuation support, security</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built for CC100 · Inspire preparedness, empower action.
+  </footer>
+
+  <script src="disaster.js" defer></script>
+</body>
+</html>

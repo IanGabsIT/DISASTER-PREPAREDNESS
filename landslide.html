@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landslide Disaster Preparedness</title>
+    <link rel="stylesheet" href="landslide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="disaster-landslide">
+
+<!-- YouTube Video Background -->
+    <div class="video-background">
+        <iframe 
+            src="https://www.youtube.com/embed/8g-uN53yGZ4?autoplay=1&loop=1&playlist=8g-uN53yGZ4&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&playlist=8g-uN53yGZ4""
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-overlay"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <p class="badge">Landslide Disaster Preparedness</p>
+            <h1>⛰️ Landslide Preparedness Guide</h1>
+            <p class="header-subtitle">Critical information for landslide prevention, early warning, and safety</p>
+            <nav aria-label="Breadcrumb" style="margin-top: 1rem;">
+                <a href="./main-page.html">Back to Main Page</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#self-assessment">Self Assessment</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#preparedness">Preparedness</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#mitigation">Mitigation</a></li>
+            <li><a href="#cause-effect">Cause & Effect</a></li>
+            <li><a href="#hotlines">Hotlines</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Self Assessment -->
+        <section id="self-assessment" class="self-test">
+            <p class="badge">Self Assessment</p>
+            <h2>Landslide Readiness Self-Assessment</h2>
+            <p>Evaluate your landslide risk and preparedness</p>
+
+            <form id="assessmentForm">
+                <div class="question">
+                    <label for="landslide-risk">1. Do you know if your area is landslide-prone?</label>
+                    <select id="landslide-risk" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, checked MGB maps and know risk level</option>
+                        <option value="2">Generally aware of risk</option>
+                        <option value="1">Uncertain about risk</option>
+                        <option value="0">No knowledge of landslide risk</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="warning-signs">2. Can you identify landslide warning signs?</label>
+                    <select id="warning-signs" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, trained to recognize all warning signs</option>
+                        <option value="2">Know some warning signs</option>
+                        <option value="1">Basic knowledge only</option>
+                        <option value="0">No knowledge</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="slope-stability">3. Is your property on stable ground?</label>
+                    <select id="slope-stability" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, verified by geologist/engineer</option>
+                        <option value="2">Believe it is stable</option>
+                        <option value="1">Uncertain</option>
+                        <option value="0">On unstable slope</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="evacuation-plan">4. Do you have a landslide evacuation plan?</label>
+                    <select id="evacuation-plan" required>
+                        <option value="">Choose</option>
+                        <option value="3">Yes, practiced and know safe routes</option>
+                        <option value="2">Have a plan but not practiced</option>
+                        <option value="1">Informal plan only</option>
+                        <option value="0">No evacuation plan</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Readiness Score</button>
+            </form>
+
+            <div id="assessmentResult" class="result" role="alert">
+                <strong>Readiness Score: <span id="scoreValue">0</span>/12</strong>
+                <p id="scoreMessage"></p>
+            </div>
+        </section>
+
+        <!-- Checklist -->
+        <section id="checklist">
+            <p class="badge">Checklist</p>
+            <h2>Landslide Preparedness Checklist</h2>
+            <div class="progress" aria-live="polite"><span id="checkProgress"></span></div>
+            <p id="progressLabel">0% complete</p>
+
+            <div class="grid grid-2">
+                <label class="card"><input type="checkbox" class="check-item"> Check MGB landslide hazard maps</label>
+                <label class="card"><input type="checkbox" class="check-item"> Learn to identify landslide warning signs</label>
+                <label class="card"><input type="checkbox" class="check-item"> Monitor slope stability regularly</label>
+                <label class="card"><input type="checkbox" class="check-item"> Install slope drainage systems</label>
+                <label class="card"><input type="checkbox" class="check-item"> Plant vegetation to stabilize slopes</label>
+                <label class="card"><input type="checkbox" class="check-item"> Avoid building on steep slopes</label>
+                <label class="card"><input type="checkbox" class="check-item"> Create evacuation plan with safe routes</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know safe zones away from slopes</label>
+                <label class="card"><input type="checkbox" class="check-item"> Prepare emergency kit for evacuation</label>
+                <label class="card"><input type="checkbox" class="check-item"> Monitor weather during heavy rains</label>
+                <label class="card"><input type="checkbox" class="check-item"> Have battery-powered radio for alerts</label>
+                <label class="card"><input type="checkbox" class="check-item"> Coordinate with barangay DRRM office</label>
+                <label class="card"><input type="checkbox" class="check-item"> Report cracks or slope movement immediately</label>
+                <label class="card"><input type="checkbox" class="check-item"> Avoid cutting trees on slopes</label>
+                <label class="card"><input type="checkbox" class="check-item"> Know emergency hotlines</label>
+            </div>
+        </section>
+
+        <!-- Ways to be Prepared -->
+        <section id="preparedness">
+            <p class="badge">Ways to be Prepared</p>
+            <h2>Landslide Preparedness Strategies</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Prevention Measures</h3>
+                    <ul>
+                        <li>Check MGB landslide hazard maps for your area</li>
+                        <li>Avoid building on steep slopes or unstable ground</li>
+                        <li>Plant vegetation to stabilize slopes</li>
+                        <li>Install proper drainage systems</li>
+                        <li>Monitor slope stability regularly</li>
+                        <li>Report warning signs to authorities immediately</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Warning Signs to Watch</h3>
+                    <ul>
+                        <li>Cracks in ground, walls, or roads</li>
+                        <li>Bulging ground at base of slope</li>
+                        <li>Water seeping from slope</li>
+                        <li>Tilting trees, utility poles, or fences</li>
+                        <li>Sudden changes in water flow</li>
+                        <li>Unusual sounds (rumbling, cracking)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>During Landslide Risk</h3>
+                    <ul>
+                        <li>Evacuate immediately if authorities recommend</li>
+                        <li>Move to higher ground away from slopes</li>
+                        <li>Stay away from landslide paths</li>
+                        <li>Listen to radio for updates</li>
+                        <li>Be alert during heavy rainfall</li>
+                        <li>Do not return until authorities say it's safe</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="statistics">
+            <p class="badge">Statistics Report</p>
+            <h2>Landslide Statistics in the Philippines</h2>
+            <div class="stats-grid">
+                <div class="card stat-card" data-value="500" data-label="Average landslide incidents per year" data-trend="70">
+                    <h4>Annual Landslides</h4>
+                    <span class="stat-value">0</span>
+                    <small>Rain-induced landslides (MGB data)</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="80" data-label="Percent triggered by heavy rainfall" data-trend="75">
+                    <h4>Rain-Induced</h4>
+                    <span class="stat-value">0</span>
+                    <small>Most common trigger</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="15" data-label="Percent triggered by earthquakes" data-trend="60">
+                    <h4>Earthquake-Triggered</h4>
+                    <span class="stat-value">0</span>
+                    <small>Secondary hazard</small>
+                    <div class="spark"><span></span></div>
+                </div>
+                <div class="card stat-card" data-value="1200" data-label="Barangays in high-risk landslide areas" data-trend="65">
+                    <h4>At-Risk Barangays</h4>
+                    <span class="stat-value">0</span>
+                    <small>Identified by MGB</small>
+                    <div class="spark"><span></span></div>
+                </div>
+            </div>
+        </section>
+
+  <!-- Videos -->
+<section id="videos">
+    <p class="badge">Educational Videos</p>
+    <h2>Earthquake Safety Videos</h2>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/DAnDza8qRsM" 
+            frameborder="0" 
+            title="Landslide Awareness and Preparedness"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<style>
+.video-container {
+    width: 100%;
+    max-width: 900px; /* optional: limits video width */
+    margin: 20px auto; /* center */
+    height: 500px; /* adjust height */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+</style>
+
+        <!-- Mitigation -->
+        <section id="mitigation">
+            <p class="badge">Ways to Mitigate Accidents</p>
+            <h2>Landslide Accident Mitigation Strategies</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Structural & Technical</h3>
+                    <ul>
+                        <li>Install retaining walls and slope stabilization</li>
+                        <li>Construct proper drainage systems</li>
+                        <li>Build terraces on steep slopes</li>
+                        <li>Install early warning systems and sensors</li>
+                        <li>Use geotextiles and slope reinforcement</li>
+                        <li>Implement slope monitoring systems</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Behavioral & Policy</h3>
+                    <ul>
+                        <li>Enforce no-build zones in high-risk areas</li>
+                        <li>Promote reforestation and vegetation cover</li>
+                        <li>Regulate mining and quarrying activities</li>
+                        <li>Community landslide awareness programs</li>
+                        <li>Regular slope inspections and maintenance</li>
+                        <li>Coordination with MGB for hazard mapping</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cause and Effect -->
+        <section id="cause-effect">
+            <p class="badge">Cause and Effect</p>
+            <h2>Landslide: Causes and Effects</h2>
+            <table class="cause-effect-table">
+                <thead>
+                    <tr>
+                        <th>Primary Causes</th>
+                        <th>Immediate Effects</th>
+                        <th>Long-term Consequences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Heavy Rainfall:</strong> Saturated soil, loss of slope stability
+                        </td>
+                        <td>
+                            Mass movement of soil and rocks, burial of structures, blocked roads
+                        </td>
+                        <td>
+                            Permanent displacement, infrastructure damage, watershed degradation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Earthquakes:</strong> Ground shaking destabilizing slopes
+                        </td>
+                        <td>
+                            Sudden landslides, multiple slope failures, widespread damage
+                        </td>
+                        <td>
+                            Long-term slope instability, relocation needs, economic losses
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Human Activities:</strong> Deforestation, mining, construction
+                        </td>
+                        <td>
+                            Slope destabilization, increased erosion, triggered landslides
+                        </td>
+                        <td>
+                            Environmental degradation, increased vulnerability, policy changes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Volcanic Activity:</strong> Lahar flows, ash accumulation
+                        </td>
+                        <td>
+                            Volcanic landslides, lahar flows, debris avalanches
+                        </td>
+                        <td>
+                            Long-term lahar risk, permanent relocation, ecosystem changes
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Hotlines -->
+        <section id="hotlines">
+            <p class="badge">Philippine Hotlines</p>
+            <h2>Emergency Hotlines for Landslides</h2>
+            <div class="hotlines">
+                <div class="card hotline-card">
+                    <h3>911</h3>
+                    <p>National Emergency Hotline</p>
+                    <small>Integrated emergency response</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>02-8911-5061</h3>
+                    <p>NDRRMC</p>
+                    <small>Landslide response coordination</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>(049) 542-4421</h3>
+                    <p>Mines and Geosciences Bureau Region IV-A</p>
+                    <small>Landslide hazard information and reporting</small>
+                </div>
+                <div class="card hotline-card">
+                    <h3>+63-2-8790-2300</h3>
+                    <p>Philippine Red Cross</p>
+                    <small>Rescue and relief operations</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="./main-page.html">Back to Main Page</a>
+        <p>Built for CC100 · Disaster Preparedness Education</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+</body>
+</html>
+

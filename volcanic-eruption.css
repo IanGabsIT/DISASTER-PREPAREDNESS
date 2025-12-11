@@ -1,0 +1,105 @@
+@import url("./disaster.css");
+
+/* Volcanic eruption specific theme */
+body.disaster-volcano {
+  --clr-bg: #2d1a00;
+  --clr-bg-alt: #4d2d00;
+  --clr-card: rgba(77, 45, 0, 0.85);
+  --clr-card-pop: rgba(102, 60, 0, 0.75);
+  --clr-accent: #d97706;
+  --clr-accent-2: #f59e0b;
+  --clr-accent-3: #b45309;
+  --clr-accent-4: #92400e;
+  --clr-text: #fffbf0;
+  --clr-muted: #fcd9a5;
+  --clr-bg-grad-1: rgba(217, 119, 6, 0.25);
+  --clr-bg-grad-2: rgba(180, 83, 9, 0.2);
+  --clr-bg-orb-1: rgba(217, 119, 6, 0.15);
+  --clr-bg-orb-2: rgba(180, 83, 9, 0.15);
+  --clr-header-bg-1: rgba(45, 26, 0, 0.95);
+  --clr-header-bg-2: rgba(77, 45, 0, 0.9);
+  --clr-header-grad-1: rgba(217, 119, 6, 0.3);
+  --clr-header-grad-2: rgba(180, 83, 9, 0.25);
+  --clr-nav-bg: rgba(45, 26, 0, 0.95);
+  --clr-nav-border: rgba(217, 119, 6, 0.3);
+  --clr-nav-shadow: rgba(217, 119, 6, 0.4);
+  --clr-nav-active-1: rgba(217, 119, 6, 0.25);
+  --clr-nav-active-2: rgba(180, 83, 9, 0.2);
+  --clr-section-border: rgba(217, 119, 6, 0.25);
+  --clr-section-shadow: rgba(45, 26, 0, 0.5);
+  --clr-section-hover-1: rgba(217, 119, 6, 0.08);
+  --clr-section-hover-2: rgba(180, 83, 9, 0.08);
+  --clr-card-hover: rgba(217, 119, 6, 0.2);
+  --clr-card-hover-border: rgba(217, 119, 6, 0.6);
+  --clr-card-shadow: rgba(45, 26, 0, 0.6);
+  --clr-badge-bg: rgba(217, 119, 6, 0.15);
+  --clr-badge-border: rgba(217, 119, 6, 0.4);
+  --clr-input-border: rgba(217, 119, 6, 0.4);
+  --clr-input-bg: rgba(77, 45, 0, 0.6);
+  --clr-result-bg: rgba(77, 45, 0, 0.8);
+  --clr-result-border: rgba(217, 119, 6, 0.4);
+  --clr-result-shadow: rgba(217, 119, 6, 0.25);
+  --clr-video-shadow: rgba(217, 119, 6, 0.3);
+  --clr-stat-border: rgba(217, 119, 6, 0.3);
+  --clr-spark-bg: rgba(217, 119, 6, 0.3);
+  --clr-table-border: rgba(217, 119, 6, 0.3);
+  --clr-table-header: rgba(217, 119, 6, 0.15);
+  --clr-orb: rgba(217, 119, 6, 0.4);
+  --clr-link-shadow: rgba(217, 119, 6, 0.4);
+  background: radial-gradient(circle at 20% 20%, var(--clr-bg-grad-1), transparent 45%),
+    radial-gradient(circle at 80% 0%, var(--clr-bg-grad-2), transparent 40%), var(--clr-bg);
+}
+
+body.disaster-volcano::before {
+  background: radial-gradient(circle, var(--clr-bg-orb-1), transparent 65%);
+}
+
+body.disaster-volcano::after {
+  background: radial-gradient(circle, var(--clr-bg-orb-2), transparent 65%);
+}
+
+body.disaster-volcano header::before {
+  background: radial-gradient(circle at 30% 20%, var(--clr-header-grad-1), transparent 55%);
+}
+
+body.disaster-volcano header::after {
+  background: radial-gradient(circle at 70% 40%, var(--clr-header-grad-2), transparent 55%);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 26, 10, 0.3);
+  z-index: 1;
+}
+
+body.disaster-landslide > *:not(.video-background) {
+  position: relative;
+  z-index: 1;
+}

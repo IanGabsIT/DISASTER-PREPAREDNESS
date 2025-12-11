@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Preparedness Hub</title>
+    <link rel="stylesheet" href="disaster.css">
+    <link rel="stylesheet" href="main-gallery.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <p class="badge">Philippines · Disaster Preparedness</p>
+            <h1>Disaster Preparedness Hub</h1>
+            <p class="header-subtitle">High-order thinking skills for disaster preparedness. Learn, prepare, and protect
+                your community from natural disasters.</p>
+        </div>
+    </header>
+
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="#disasters">Common Disasters</a></li>
+            <li><a href="#disaster-grid">Disaster Preparations</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+            <main>
+        <section id="disasters" class="disasters-section">
+            <div class="section-header">
+                <p class="badge">Critical Hazards</p>
+                <h2>Common Disasters in the Philippines</h2>
+                <p class="section-description">Click on any disaster to learn more.</p>
+            </div>
+
+            <div class="gallery-panel">
+                <div class="gallery-copy">
+                    <p class="badge">Interactive Explorer</p>
+                    <h3>Learn all about these disasters</h3>
+                </div>
+
+                <div class="disaster-carousel" id="disaster-carousel">
+                </div>
+            </div>
+        </section>
+
+    <script src="main-gallery.js"></script>
+</body>
+
+        <section id="disaster-grid" class="disaster-grid">
+            <div class="disaster-card" data-disaster="fire">
+                <div class="disaster-icon">🔥</div>
+                <h3>Fire</h3>
+                <p>Rapid-onset disaster that can cause severe damage to property and life. Learn prevention, response, and
+                    recovery strategies.</p>
+                <a href="fire.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="earthquake">
+                <div class="disaster-icon">🌍</div>
+                <h3>Earthquake</h3>
+                <p>Sudden ground shaking caused by tectonic movements. Understand preparedness and safety measures for seismic
+                    events.</p>
+                <a href="earthquake.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="flood">
+                <div class="disaster-icon">💧</div>
+                <h3>Flood</h3>
+                <p>Water overflow from heavy rains, typhoons, or river overflow. Essential knowledge for flood-prone areas.</p>
+                <a href="flood.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="typhoon">
+                <div class="disaster-icon">🌀</div>
+                <h3>Typhoon</h3>
+                <p>Powerful tropical cyclones with strong winds and heavy rainfall. Critical for Philippine coastal communities.</p>
+                <a href="typhoon.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="landslide">
+                <div class="disaster-icon">⛰️</div>
+                <h3>Landslide</h3>
+                <p>Mass movement of soil and rocks down slopes. Learn warning signs and evacuation procedures.</p>
+                <a href="landslide.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="volcano">
+                <div class="disaster-icon">🌋</div>
+                <h3>Volcanic Eruption</h3>
+                <p>Eruption of molten rock, ash, and gases from volcanoes. Essential for communities near active volcanoes.</p>
+                <a href="volcanic-eruption.html" class="disaster-link">Learn More</a>
+            </div>
+
+            <div class="disaster-card" data-disaster="tsunami">
+                <div class="disaster-icon">🌊</div>
+                <h3>Tsunami</h3>
+                <p>Large ocean waves triggered by earthquakes or volcanic activity. Critical for coastal area preparedness.</p>
+                <a href="tsunami.html" class="disaster-link">Learn More</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <p class="badge">About This Platform</p>
+                <h2>Empowering Communities Through Knowledge</h2>
+                <p class="section-description">This disaster preparedness platform provides comprehensive information, tools,
+                    and resources to help individuals and communities prepare for, respond to, and recover from natural
+                    disasters. Each disaster page includes self-assessment tools, checklists, preparedness guides, statistics,
+                    educational videos, mitigation strategies, cause-and-effect analysis, and emergency hotlines.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built for CC100 · Disaster Preparedness Education · Inspire preparedness, empower action.</p>
+        <p class="footer-note">Remember: In case of emergency, call 911 or your local emergency hotline immediately.</p>
+    </footer>
+
+    <script src="disaster.js"></script>
+    <script type="module" src="main-gallery.js"></script>
+</body>
+
+</html>

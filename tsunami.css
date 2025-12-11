@@ -1,0 +1,104 @@
+@import url("./disaster.css");
+
+body.disaster-tsunami {
+  --clr-bg: #001a2d;
+  --clr-bg-alt: #002d4d;
+  --clr-card: rgba(0, 30, 61, 0.85);
+  --clr-card-pop: rgba(0, 45, 90, 0.75);
+  --clr-accent: #4a90e2;
+  --clr-accent-2: #5ba3f5;
+  --clr-accent-3: #2563eb;
+  --clr-accent-4: #1e3a8a;
+  --clr-text: #f0f7ff;
+  --clr-muted: #b3d9ff;
+  --clr-bg-grad-1: rgba(74, 144, 226, 0.25);
+  --clr-bg-grad-2: rgba(37, 99, 235, 0.2);
+  --clr-bg-orb-1: rgba(74, 144, 226, 0.15);
+  --clr-bg-orb-2: rgba(37, 99, 235, 0.15);
+  --clr-header-bg-1: rgba(0, 26, 45, 0.95);
+  --clr-header-bg-2: rgba(0, 45, 77, 0.9);
+  --clr-header-grad-1: rgba(74, 144, 226, 0.3);
+  --clr-header-grad-2: rgba(37, 99, 235, 0.25);
+  --clr-nav-bg: rgba(0, 26, 45, 0.95);
+  --clr-nav-border: rgba(74, 144, 226, 0.3);
+  --clr-nav-shadow: rgba(74, 144, 226, 0.4);
+  --clr-nav-active-1: rgba(74, 144, 226, 0.25);
+  --clr-nav-active-2: rgba(37, 99, 235, 0.2);
+  --clr-section-border: rgba(74, 144, 226, 0.25);
+  --clr-section-shadow: rgba(0, 26, 45, 0.5);
+  --clr-section-hover-1: rgba(74, 144, 226, 0.08);
+  --clr-section-hover-2: rgba(37, 99, 235, 0.08);
+  --clr-card-hover: rgba(74, 144, 226, 0.2);
+  --clr-card-hover-border: rgba(74, 144, 226, 0.6);
+  --clr-card-shadow: rgba(0, 26, 45, 0.6);
+  --clr-badge-bg: rgba(74, 144, 226, 0.15);
+  --clr-badge-border: rgba(74, 144, 226, 0.4);
+  --clr-input-border: rgba(74, 144, 226, 0.4);
+  --clr-input-bg: rgba(0, 30, 61, 0.6);
+  --clr-result-bg: rgba(0, 30, 61, 0.8);
+  --clr-result-border: rgba(74, 144, 226, 0.4);
+  --clr-result-shadow: rgba(74, 144, 226, 0.25);
+  --clr-video-shadow: rgba(74, 144, 226, 0.3);
+  --clr-stat-border: rgba(74, 144, 226, 0.3);
+  --clr-spark-bg: rgba(74, 144, 226, 0.3);
+  --clr-table-border: rgba(74, 144, 226, 0.3);
+  --clr-table-header: rgba(74, 144, 226, 0.15);
+  --clr-orb: rgba(74, 144, 226, 0.4);
+  --clr-link-shadow: rgba(74, 144, 226, 0.4);
+  background: radial-gradient(circle at 20% 20%, var(--clr-bg-grad-1), transparent 45%),
+    radial-gradient(circle at 80% 0%, var(--clr-bg-grad-2), transparent 40%), var(--clr-bg);
+}
+
+body.disaster-tsunami::before {
+  background: radial-gradient(circle, var(--clr-bg-orb-1), transparent 65%);
+}
+
+body.disaster-tsunami::after {
+  background: radial-gradient(circle, var(--clr-bg-orb-2), transparent 65%);
+}
+
+body.disaster-tsunami header::before {
+  background: radial-gradient(circle at 30% 20%, var(--clr-header-grad-1), transparent 55%);
+}
+
+body.disaster-tsunami header::after {
+  background: radial-gradient(circle at 70% 40%, var(--clr-header-grad-2), transparent 55%);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 26, 10, 0.3);
+  z-index: 1;
+}
+
+body.disaster-landslide > *:not(.video-background) {
+  position: relative;
+  z-index: 1;
+}
